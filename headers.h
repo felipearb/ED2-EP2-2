@@ -38,19 +38,19 @@ bTree* createTree(char* fileName,bool mode);
 
 bTreeNode* nodeInit(bTreeNode* node,bool isLeaf,bTree* tree);
 void insert(bTree* tree,recordNode* record);
-void delete(bTree* tree,int key);
+void delete(bTree* tree,int codigoLivro);
 void traverse(bTree* tree, int root);
 void dispNode(bTreeNode* node);
 void writeFile(bTree* ptr_tree, bTreeNode* p, int pos);
 void readFile(bTree* ptr_tree, bTreeNode* p, int pos);
 
 
-void enterData(recordNode* record, int codigoLivro, char titulo[], char nome[], int ano);
+void enterData(recordNode* record, bool valido,int codigoLivro, char titulo[], char nome[], int ano);
 recordNode* getData(char *filepath, int len);
-recordNode* search(bTree* tree, int key);
+recordNode* search(bTree* tree, int codigoLivro);
 /*
-recordNode* searchRecursive(bTree* tree, int key, bTreeNode* root);
-bool removeFromTree(bTree* tree, int key);
+recordNode* searchRecursive(bTree* tree, int codigoLivro, bTreeNode* root);
+bool removeFromTree(bTree* tree, int codigoLivro);
 bTreeNode* merge(bTree* tree, bTreeNode *node, int idx);
 void borrowFromNext(bTree* tree, bTreeNode *node, int idx);
 void borrowFromPrev(bTree* tree, bTreeNode *node, int idx);
